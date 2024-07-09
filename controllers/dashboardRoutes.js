@@ -12,7 +12,7 @@ router.get("/", withGuard, async (req, res) => {
 
 const posts = postData.map((post) => post.get({ plain: true }));
 
-riuter.get("edit/:id", withGuard, async (req,res) => {
+router.get("edit/:id", withGuard, async (req,res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
         if (postData) {
@@ -21,9 +21,9 @@ riuter.get("edit/:id", withGuard, async (req,res) => {
                 dashboard: true,
                 posts,
                 loggedIn: req.session.logged_in,
-            }
-            );
-        } else{ res.stsus(404).end();
+            });
+
+        } else { res.stsus(404).end();
 
         }
     } catch (err) {
@@ -38,8 +38,6 @@ res.render("dashboard", {
     dashboard: true,
     posts,
     loggedIn: req.session.logged_in,
-
-
 });
     } catch (err) {res.status(500).json(err);  
     }
