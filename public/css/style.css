@@ -1,7 +1,7 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #9caea9;
-  --tertiary: #788585;
+  --primary: #dad6cc;
+  --secondary: #acae9c;
+  --tertiary: #857f78;
   --light-dark: #6f6866;
   --dark: #38302e;
   --border-radius: 0.3rem;
@@ -15,7 +15,7 @@ body {
   background-color: var(--primary);
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
