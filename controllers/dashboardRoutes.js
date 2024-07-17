@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Post } = require("../models");
-const { withGuard } = require("/utils/authGuard");
+const { withGuard } = require("../utils/authGuard");
 
 router.get("/", withGuard, async (req, res) => {
     try {
